@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>EasyBooking</ion-title>
+        <ion-icon name="cart" slot="end"></ion-icon>
+
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div class="botones-css">
+    <label for="start-date">Fecha Inciar:</label>
+    <input type="date" [formControl]="startDate" id="start-date">
+  
+    <label for="end-date">Fecha Final :</label>
+    <input type="date" [formControl]="endDate" id="end-date">
+    <button (click)="searchRooms()">Buscar Habitación</button>
+
+
+  </div>
+
+
+  <table *ngIf="habitacionesDisponibles">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Fecha de Inicio</th>
+        <th>Fecha de Fin</th>
+        <th>Modelo Habitacion </th>
+        <th>Acciones</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let habitacion of habitaciones">
+        <td>{{ habitacion.nombre }}</td>
+        <td>{{ habitacion.descripcion }}</td>
+        <td>{{ habitacion.availability[0].start }}</td>
+        <td>{{ habitacion.availability[0].end }}</td>
+        <td><img src="{{ habitacion.imageUrl }}" alt="Foto de la habitación" width="100"></td>
+        <button (click)="agregarAlCarrito(habitacion)" class="add-button">Agregar</button>
+        <button (click)="eliminarDelCarrito(habitacion)" class="delete-button">Eliminar</button>
+      
+      </tr>
+    </tbody>
+  </table>
+
+
+</ion-content>

@@ -1,0 +1,32 @@
+ion-header {
+    --background: #fff;
+    --ion-color-primary: #d32f2f; 
+     }
+
+ion-toolbar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+   
+
+  ion-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+}
+
+ion-content {
+    --background: url('https://i.ibb.co/HVWc4zL/imagen-fondo.webp') no-repeat center center / cover;
+    background-color: white;  
+    filter: brightness(90%) opacity(100%);
+ 
+
+
+
+ 
+  }
+ 
+ 

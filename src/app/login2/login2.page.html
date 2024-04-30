@@ -1,0 +1,32 @@
+<ion-header>
+  
+  <ion-toolbar color="primary">
+    <ion-title>EasyBooking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding login-content">
+  <form #loginForm="ngForm" (ngSubmit)="login()" class="login-form">
+    <ion-item lines="full">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email" name="email" required ngModel></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password" name="password" required ngModel></ion-input>
+    </ion-item>
+    <ion-label color="danger" *ngIf="errorMessage">{{ errorMessage }}</ion-label>
+    <ion-button expand="block" type="submit" [disabled]="!loginForm.valid" class="login-button">Iniciar Sesión</ion-button>
+    
+  </form>
+  <ion-button expand="block" fill="clear" (click)="register()" class="register-button">Registrarse</ion-button>
+
+
+<ion-button expand="block" fill="clear" (click)="intranet()" class="intranet-button">intranet</ion-button>
+</ion-content>
+
+
+<!-- el boton de inicio de sesion esta en disable por que falta terminar la base de datos -->
+
+
+

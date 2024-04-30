@@ -1,0 +1,54 @@
+ion-header {
+    --background: #fff;
+    --ion-color-primary: #d32f2f; 
+     }
+
+ion-toolbar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+   
+
+  ion-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+}
+
+
+ion-content {
+    --background: url('https://i.ibb.co/FWqvPmC/70d756d2-172b-4d40-85f6-178221ef2094.webp') no-repeat center center / cover;
+    background-color: white;  
+    filter: brightness(90%) opacity(100%);
+ 
+
+
+
+ 
+  }
+
+
+  .button-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;  
+  }
+
+
+  .confirm-button {
+    position: absolute;
+    top: 28%;  
+    left: 50%;  
+    transform: translate(-50%, -50%); 
+    width: 200px;  
+    height: 100px;  
+    font-size: 20px;  
+    --border-radius: 0; 
+  }
+
+  // no usar css inline ctm vean lo que ponen en el codigo no copien weas

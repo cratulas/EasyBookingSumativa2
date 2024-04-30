@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Panel de Administración - Habitaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4">
+        <ion-card>
+          <img src="assets/hab-04-6.webp" alt="Foto de la habitación">
+          <ion-card-header>
+            <ion-card-title>Habitacion ejectuvia</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="stacked">Nombre de Habitación</ion-label>
+              <ion-input value="Habitacion ejectuvia"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Descripción</ion-label>
+              <ion-textarea value="es una habitacion"></ion-textarea>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Disponibilidad Inicio</ion-label>
+              <ion-datetime display-format="YYYY-MM-DD" value="2024-04-28"></ion-datetime>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Disponibilidad Fin</ion-label>
+              <ion-datetime display-format="YYYY-MM-DD" value="2029-08-01"></ion-datetime>
+            </ion-item>
+          </ion-card-content>
+          <ion-button expand="full" color="primary">Actualizar</ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+//falta la logica del carrito que agregue la habitacion del arreglo al carro y persista de manera
+local luego envia y genera el qr
